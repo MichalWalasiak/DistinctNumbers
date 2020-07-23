@@ -1,6 +1,7 @@
 package Algorythms;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class PrintDistinctNumbers {
 
@@ -8,22 +9,17 @@ public class PrintDistinctNumbers {
         Service service = new Service();
         int listSize;
 
-        System.out.println("insert numbers separated with comma and press enter when finished");
-
         String[] input =  service.getNumbers();
-        List<Integer> list = service.parse(input);
-        service.sort(list);
-        listSize = list.size();
+        List<Integer> integers = service.parse(input);
+        listSize = integers.size();
 
-        list = service.sortUnique(list);
+        integers = service.sortUnique(integers);
 
-        System.out.println("Output");
-        System.out.println(list);
+        System.out.println(integers);
 
         System.out.println("count: " + listSize);
-        System.out.println("distinct: " + list.size());
-        System.out.println("min: " + list.get(0));
-        System.out.println("max: " + list.get(list.size() - 1));
-
+        System.out.println("distinct: " + integers.size());
+        System.out.println(integers.stream().mapToInt(i -> i).min().orElseThrow(NoSuchElementException::new));
+        System.out.println(integers.stream().mapToInt(i -> i).max().orElseThrow(NoSuchElementException::new));
     }
 }

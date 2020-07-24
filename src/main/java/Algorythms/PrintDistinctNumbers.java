@@ -11,7 +11,7 @@ public class PrintDistinctNumbers {
         NumbersService numbersService = new NumbersService();
         int listSize;
 
-        List<Integer> integers =  numbersService.getNumbers();
+        List<Integer> integers =  numbersService.getNumbersAndParseToInteger();
         listSize = integers.size();
 
         integers = sortUnique(integers);

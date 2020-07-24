@@ -3,7 +3,7 @@ package Algorythms;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-public class PrintDistinctNumbers {
+public class Task1 {
 
     public static void main(String[] args) {
         NumbersService numbersService = new NumbersService();

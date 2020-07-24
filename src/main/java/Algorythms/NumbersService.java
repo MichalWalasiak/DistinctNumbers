@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class NumbersService {
     Scanner scanner = new Scanner(System.in);
 
-    public List<Integer> getNumbers() {
+    public List<Integer> getNumbersAndParseToInteger() {
         String[] input =  scanner.nextLine().split(" ");
         return Arrays.stream(input)
                 .map(Integer::parseInt).collect(Collectors.toList());

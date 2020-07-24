@@ -4,3 +4,14 @@ The application search through the given set of Integers and returns list that c
 The Application is written in java version 11.
 
 Run main method in Task1 class to start program and provide Integers separated with space.
+
+Sample input:
+4 5 7 -1 4 7
+
+expected output:
+
+[-1, 4, 5, 7]
+count: 6
+distinct: 4
+min: -1
+max: 7

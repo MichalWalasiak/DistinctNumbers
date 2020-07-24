@@ -27,5 +27,6 @@ class SortServiceTest {
 
         // then
         assertEquals(integer.size(), 4);
+        assertEquals(integer.get(1), 2);
     }
 }

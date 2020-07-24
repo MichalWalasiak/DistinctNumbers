@@ -3,23 +3,24 @@ package Algorythms;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import static Algorythms.SortService.sortUnique;
+
 public class PrintDistinctNumbers {
 
     public static void main(String[] args) {
-        Service service = new Service();
+        NumbersService numbersService = new NumbersService();
         int listSize;
 
-        String[] input =  service.getNumbers();
-        List<Integer> integers = service.parse(input);
+        List<Integer> integers =  numbersService.getNumbers();
         listSize = integers.size();
 
-        integers = service.sortUnique(integers);
+        integers = sortUnique(integers);
 
         System.out.println(integers);
 
         System.out.println("count: " + listSize);
         System.out.println("distinct: " + integers.size());
-        System.out.println(integers.stream().mapToInt(i -> i).min().orElseThrow(NoSuchElementException::new));
-        System.out.println(integers.stream().mapToInt(i -> i).max().orElseThrow(NoSuchElementException::new));
+        System.out.println("min: " + integers.stream().mapToInt(i -> i).min().orElseThrow(NoSuchElementException::new));
+        System.out.println("max: " + integers.stream().mapToInt(i -> i).max().orElseThrow(NoSuchElementException::new));
     }
 }

@@ -3,18 +3,17 @@ package Algorythms;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import static Algorythms.SortService.sortUnique;
-
 public class PrintDistinctNumbers {
 
     public static void main(String[] args) {
         NumbersService numbersService = new NumbersService();
+        SortService sortService = new SortService();
         int listSize;
 
         List<Integer> integers =  numbersService.getNumbersAndParseToInteger();
         listSize = integers.size();
 
-        integers = sortUnique(integers);
+        integers = sortService.sortUnique(integers);
 
         System.out.println(integers);
 

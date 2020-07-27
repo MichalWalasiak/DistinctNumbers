@@ -3,6 +3,6 @@ The application search through the given set of Integers and returns list that c
 
 The Application is written in java version 11.
 
-Run main method in Task1 class to start program and provide Integers separated with space.
+Run main method in Task1 class to start program and provide Integers separated with space as an input.
 
 
